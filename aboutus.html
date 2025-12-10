@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taxolotl – Developers</title>
+
+<link rel="icon" type="image/x-icon" href="axolotl.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    :root {
+        --bg: #f6faf6;
+        --text: #2e4634;
+        --card-bg: #ffffff;
+        --accent1: #ffb8d6;
+        --accent2: #d9f2d9;
+        --accent3: #ffe6f1;
+        --soft-gradient: linear-gradient(135deg, #ffeaf3, #e7fff1);
+    }
+
+    body.dark {
+        --bg: #1c1c1c;
+        --text: #e6e6e6;
+        --card-bg: #2a2a2a;
+        --accent1: #ff8fb8;
+        --accent2: #8cd8a2;
+        --accent3: #444444;
+        --soft-gradient: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+    }
+
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: var(--soft-gradient);
+        color: var(--text);
+        transition: 0.3s ease;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    header .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .theme-btn {
+        background: var(--accent3);
+        border: none;
+        padding: 10px 12px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .theme-btn:hover {
+        transform: scale(1.1);
+    }
+
+    /* Return Button Styles */
+    .return-btn {
+        background: var(--accent2);
+        color: var(--text);
+        border: none;
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: 0.3s ease;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        margin-right: 20px;
+    }
+
+    .return-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    body.dark .return-btn {
+        background: var(--accent3);
+        color: var(--text);
+    }
+
+    .dev-section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .dev-section h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    .dev-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .dev-card {
+        width: 300px;
+        background: var(--card-bg);
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+        transition: .25s;
+        text-align: center;
+    }
+
+    .dev-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .dev-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: auto;
+        margin-bottom: 15px;
+        overflow: hidden;
+        background: var(--accent1);
+        display: grid;
+        place-items: center;
+    }
+
+    .dev-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .dev-card h3 {
+        margin: 10px 0;
+        font-size: 22px;
+    }
+
+    .info {
+        font-size: 15px;
+        opacity: .85;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .socials a {
+        margin: 0 8px;
+        font-size: 20px;
+        color: var(--accent1);
+        transition: .3s;
+    }
+
+    .socials a:hover {
+        transform: scale(1.2);
+    }
+
+    footer {
+        text-align: center;
+        padding: 35px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <!-- Return Button -->
+    <button class="return-btn" onclick="history.back()">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <div class="logo">
+        <img src="axolotl.png" alt="Taxolotl Logo">
+        Taxolotl
+    </div>
+
+    <button class="theme-btn" id="themeToggle"><i class="fa-solid fa-moon"></i></button>
+</header>
+
+<section class="dev-section">
+    <h1>Meet the Developers</h1>
+    <p>Get to know the amazing team behind Taxolotl.</p>
+
+    <div class="dev-grid">
+
+        <!-- Developer 1 -->
+        <div class="dev-card">
+            <div class="dev-avatar">
+                <img src="art.png" alt="Art John Amaro">
+            </div>
+            <h3>Art John Amaro</h3>
+            <p class="info">Birthday: April 17, 2006<br>Zodiac: Aries<br>MBTI: ESFJ</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/artjohn.amaro?rdid=tGApEEeNX44nvYcT&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17SJCzHiDV#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <!-- Developer 2 -->
+        <div class="dev-card">
+            <div class="dev-avatar">
+                <img src="leni.png" alt="Lenard David">
+            </div>
+            <h3>Lenard David</h3>
+            <p class="info">Birthday: November 09, 2006<br>Zodiac: Scorpio<br>MBTI: ESFP</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/lenard.david.925?rdid=3ZaAWXzw1aA5ZoZX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17NuseRbjg%2F#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <!-- Developer 3 -->
+        <div class="dev-card">
+            <div class="dev-avatar">
+                <img src="roanne.png" alt="Roanne Fajardo">
+            </div>
+            <h3>Roanne Fajardo</h3>
+            <p class="info">Birthday: December 23, 2005<br>Zodiac: Capricorn<br>MBTI: INFP</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/roanne.fajardo.92?mibextid=wwXIfr&rdid=P7vO8J2FoMxC5tMh&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Eg8H45SpQ%2F%3Fmibextid%3DwwXIfr#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <!-- Developer 4 -->
+        <div class="dev-card">
+            <div class="dev-avatar">
+                <img src="cass.png" alt="Cassandra Halili">
+            </div>
+            <h3>Cassandra Halili</h3>
+            <p class="info">Birthday: May 03, 2006<br>Zodiac: Taurus<br>MBTI: INFP</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/profile.php?id=61577249188326"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <!-- Developer 5 -->
+        <div class="dev-card">
+            <div class="dev-avatar">
+                <img src="czai.png" alt="Czairah Jean Lacsina">
+            </div>
+            <h3>Czairah Jean Lacsina</h3>
+            <p class="info">Birthday: April 08, 2006<br>Zodiac: Aries<br>MBTI: ISFP</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/dimple.lacsina?rdid=5eP11wQutiOea1Ug&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GjMRt9cvK%2F#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <!-- Developer 6 -->
+        <div class="dev-card">
+            <div class="dev-avatar">
+                <img src="carl.png" alt="Carl Asnef Soguilon">
+            </div>
+            <h3>Carl Asnef Soguilon</h3>
+            <p class="info">Birthday: November 18, 2005<br>Zodiac: Scorpio<br>MBTI: ENTJ</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/asnef.soguilonbondoc"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2025 Taxolotl • Developed with care by the Taxolotl Team.
+</footer>
+
+<script>
+    const toggle = document.getElementById("themeToggle");
+
+    toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+
+        toggle.innerHTML = document.body.classList.contains("dark")
+            ? '<i class="fa-solid fa-sun"></i>'
+            : '<i class="fa-solid fa-moon"></i>';
+    });
+</script>
+
+</body>
+</html>
