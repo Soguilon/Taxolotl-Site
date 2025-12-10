@@ -478,7 +478,12 @@
     <!-- NEW: Dark mode toggle -->
     <button id="darkModeBtn" class="btn btn-kawaii btn-sm" title="Toggle dark mode"><i id="darkModeIcon" class="fa fa-moon"></i></button>
 
-    <button class="about-btn" id="openAboutBtn"><i class="fa fa-info-circle"></i> About</button>
+   <button class="about-btn" id="openAboutBtn"
+        data-bs-toggle="modal" 
+        data-bs-target="#aboutModal">
+  <i class="fa fa-info-circle"></i> About
+</button>
+
   </div>
 </div>
 <div class="layout">
@@ -1123,3 +1128,4 @@ window.__taskalot = { runPenaltyNow: applyUnifiedPenalty, normalizeFlags: normal
 </body>
 
 </html>
+
