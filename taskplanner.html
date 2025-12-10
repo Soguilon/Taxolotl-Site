@@ -667,6 +667,7 @@
 
 <!-- FULL JS CODE -->
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
   // Full rewritten Taskalot script — consolidated, cleaned, and preserving all requested features.
 // Drop this JS into your HTML inside the existing <script> tag (replaces previous large script body).
 
@@ -688,10 +689,10 @@ const xpLabel = document.getElementById('xpLabel');
 const levelDisplay = document.getElementById('levelDisplay');
 
 // modal instances (bootstrap expected to be loaded)
-const aboutModal = new bootstrap.Modal(document.getElementById('aboutModal'));
-const subjectModal = new bootstrap.Modal(document.getElementById('subjectModal'));
-const editTaskModal = new bootstrap.Modal(document.getElementById('editTaskModal'));
-const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+ const aboutModal = new bootstrap.Modal(document.getElementById('aboutModal'));
+  const subjectModal = new bootstrap.Modal(document.getElementById('subjectModal'));
+  const editTaskModal = new bootstrap.Modal(document.getElementById('editTaskModal'));
+  const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
 
 // modal elements
 const subjectModalTitle = document.getElementById('subjectModalTitle');
@@ -1110,6 +1111,7 @@ initDefaults(); renderSubjects(); renderTasks(); createRecentToolbar(); enhanceR
 window.__taskalot = { runPenaltyNow: applyUnifiedPenalty, normalizeFlags: normalizeOldFlags, tasks, subjects };
 
 /* End of rewritten script */
+  }); // END DOMContentLoaded
 </script>
 
 <style>
@@ -1119,4 +1121,5 @@ window.__taskalot = { runPenaltyNow: applyUnifiedPenalty, normalizeFlags: normal
 </style>
 
 </body>
+
 </html>
